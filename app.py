@@ -87,7 +87,7 @@ def set_page_style() -> None:
         }
 
         header[data-testid="stHeader"] {
-            background: #111827 !important;
+            background: #1B2638 !important;
             color: #EAF2FF;
         }
 
@@ -167,6 +167,18 @@ def set_page_style() -> None:
             position: relative;
             z-index: 1;
             max-width: 1400px;
+        }
+
+        .block-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2rem;
+            background: #1B2638;
+            pointer-events: none;
+            z-index: 0;
         }
 
         h1, h2, h3, h4, h5 {
