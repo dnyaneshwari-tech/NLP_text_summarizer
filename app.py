@@ -95,6 +95,47 @@ def set_page_style() -> None:
             background: transparent !important;
         }
 
+        header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"] {
+            background: rgba(148,163,184,0.14) !important;
+            border: 1px solid rgba(229,231,235,0.16) !important;
+            border-radius: 8px !important;
+            color: #FFFFFF !important;
+            opacity: 1 !important;
+            filter: none !important;
+            transition: filter 0.18s ease;
+        }
+
+        header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"] {
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+        }
+
+        [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] [data-testid="stBaseButton-headerNoPadding"] {
+            color: #FFFFFF !important;
+            opacity: 1 !important;
+            filter: none !important;
+            transition: filter 0.18s ease;
+        }
+
+        [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"],
+        [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] [data-testid="stBaseButton-headerNoPadding"] {
+            visibility: visible !important;
+        }
+
+        [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] [data-testid="stIconMaterial"] {
+            color: #FFFFFF !important;
+            -webkit-text-fill-color: #FFFFFF !important;
+        }
+
+        [data-testid="stSidebar"] [data-testid="stSidebarCollapseButton"] [data-testid="stBaseButton-headerNoPadding"]:hover {
+            filter: brightness(1.15) !important;
+        }
+
+        header[data-testid="stHeader"] [data-testid="stExpandSidebarButton"]:hover {
+            background: rgba(59,130,246,0.22) !important;
+            filter: brightness(1.15) !important;
+        }
+
         .stApp::before {
             content: "";
             position: fixed;
