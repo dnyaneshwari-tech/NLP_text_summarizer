@@ -484,6 +484,7 @@ def set_page_style() -> None:
         .st-key-summary_output .summary-text {
             white-space: pre-wrap;
             line-height: 1.7;
+            margin-bottom: 32px;
             color: var(--text-primary);
         }
 
@@ -752,7 +753,8 @@ def render_summary_output() -> None:
             st.markdown('<div class="summary-empty">Generate a summary to see the result here.</div>', unsafe_allow_html=True)
             return
 
-        st.markdown("<div class='summary-text'>" + summary_text.replace("\n", "<br>") + "</div>", unsafe_allow_html=True)
+        display_summary = " ".join(summary_text.split())
+        st.markdown("<div class='summary-text'>" + display_summary + "</div>", unsafe_allow_html=True)
 
         col1, col2, col3, col4 = st.columns(4)
         with col1:
