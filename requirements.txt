@@ -1,0 +1,9 @@
+streamlit
+transformers
+torch
+pymupdf
+python-docx
+nltk
+pandas
+plotly
+pytest
